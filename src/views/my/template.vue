@@ -1,6 +1,6 @@
 <template>
   <div id="my">
-    登录页面
+    我的页面
   </div>
 </template>
 

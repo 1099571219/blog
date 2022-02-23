@@ -1,7 +1,13 @@
+import request from "../../helpers/request";
+import auth from "../../api/auth";
+
+window.request = request
+window.auth = auth
+
 export default {
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '欢迎来到'
     }
   },
   methods: {

@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <p>首页{{msg}}</p>
+    <p>{{msg}}首页</p>
     
     <el-button @click="onClick1">按钮1</el-button>
     <el-button :plain="true" @click="onClick2">错误</el-button>

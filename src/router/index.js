@@ -4,7 +4,7 @@ import Login from '@/views/login/template.vue'
 import Detail from '@/views/detail/template.vue'
 import Create from '@/views/create/template.vue'
 import Edit from '@/views/edit/template.vue'
-import Home from '@/views/home/template.vue'
+import Index from '@/views/index/template.vue'
 import My from '@/views/my/template.vue'
 import Register from '@/views/register/template.vue'
 import User from '@/views/user/template.vue'
@@ -15,8 +15,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
+      name: 'Index',
+      component: Index
     },
     {
       path: '/Login',
