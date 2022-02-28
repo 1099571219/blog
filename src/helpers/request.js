@@ -1,10 +1,7 @@
 import axios from "axios";
-import VueAxios from 'vue-axios'
-import {Message, message} from 'element-ui'
+import {Message} from 'element-ui'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-axios.defaults.baseURL = '//localhost:8080'
-
-window.request = request
+axios.defaults.baseURL = '//blog-server.hunger-valley.com'
 
 export default function request(url,type = 'GET',data={}){
     return new Promise((resolve,reject)=>{
