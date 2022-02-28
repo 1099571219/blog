@@ -3,7 +3,7 @@
     <section class="blog-posts">
       <router-link
         class="item"
-        v-for="blog,index in blogs"
+        v-for="(blog, index) in blogs"
         :key="index"
         :to="`/detail/${blog.id}`"
       >
@@ -12,7 +12,7 @@
           <figcaption>{{ blog.user.username }}</figcaption>
         </figure>
         <h3>
-          {{ blog.title }}<span>{{ blog.createdAt }}</span>
+          {{ blog.title }}<span>{{ friendlyDate(blog.createdAt) }}</span>
         </h3>
         <p>{{ blog.description }}</p>
       </router-link>
