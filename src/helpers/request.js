@@ -18,7 +18,6 @@ export default function request(url,type = 'GET',data={}){
             axios.defaults.headers.common['Authorization'] = localStorage.token
         }
         axios(option).then(res=>{
-            console.log(res.data);
             if(res.data.status==='ok'){
                 if(res.data.token){
                     localStorage.token = res.data.token
