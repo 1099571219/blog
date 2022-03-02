@@ -33,8 +33,6 @@
 </template>
 
 <script>
-import auth from "@/api/auth";
-window.auth = auth;
 
 import { mapGetters, mapActions } from "vuex";
 
@@ -53,7 +51,6 @@ export default {
 
   methods: {
     ...mapActions(["checkLogin", "logout"]),
-
     onLogout() {
       this.logout();
     },

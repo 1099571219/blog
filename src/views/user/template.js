@@ -13,8 +13,7 @@ export default {
   created() {
     this.userId = this.$route.params.userId
     this.page = this.$route.query.page || 1
-    blog.getBlogsByUserId(this.userId, this.atIndex).then(res => {
-      console.log(res);
+    blog.getBlogsByUserId(this.userId, {page:this.page}).then(res => {
       this.blogs = res.data
       this.page = res.page
       this.total = res.total
@@ -41,5 +40,4 @@ export default {
       }
     }
   },
-
 }

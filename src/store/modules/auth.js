@@ -36,7 +36,7 @@ const actions = {
         return res.data
     },
 
-    async logout({ commit }) {
+    async logout({ commit,state }) {
         await auth.logout()
         commit('setUser', { user: null })
         commit('setLogin', { isLogin: false })
