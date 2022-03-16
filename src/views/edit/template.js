@@ -30,7 +30,6 @@ export default {
             this.$router.push({path:`/detail/${res.data.id}`})
           })
       }).catch((err) => {
-        console.log(err.message);
         this.$message({
           type: 'info',
           message: '已取消编辑'

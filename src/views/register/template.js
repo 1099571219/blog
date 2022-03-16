@@ -13,7 +13,7 @@ export default {
     onRegister(){
       this.register({username:this.username,password:this.password})
       .then(()=>{
-        this.$router.push({path:'/login'})
+        this.$router.push({path:'/'})
       })
     }
   },

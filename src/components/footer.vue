@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div>footer</div>
+        <div>MIT Licensed | Copyright © 2021-present Zheng</div>
     </footer>
 </template>
 <style lang="less" scoped>

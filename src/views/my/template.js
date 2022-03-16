@@ -28,6 +28,7 @@ export default {
         this.page = res.page
         this.$router.push({ path: `/my/?page=${newPage}` })
       })
+
     },
     async onDelete(blogId) {
       await this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
@@ -35,9 +36,9 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       })
-        await blog.deleteBlog({ blogId })
-        this.$message.success('删除成功');
-        this.blogs = this.blogs.filter(blog => blog.id != blogId)
+      await blog.deleteBlog({ blogId })
+      this.$message.success('删除成功');
+      this.blogs = this.blogs.filter(blog => blog.id != blogId)
     },
     splitDate(dataStr) {
       let dateObj = typeof dataStr === 'object' ? dataStr : new Date(dataStr)
@@ -48,5 +49,4 @@ export default {
       }
     }
   },
-
 }

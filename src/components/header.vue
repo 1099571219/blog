@@ -1,8 +1,8 @@
 <template>
   <header :class="{ login: isLogin, 'no-login': !isLogin }">
     <template v-if="!isLogin">
-      <h1><router-link to="/">Let's share</router-link></h1>
-      <p>精品博客汇聚</p>
+      <h1><router-link to="/">金博金客</router-link></h1>
+      <p>精博汇聚</p>
       <div class="btns">
         <router-link to="/login"><el-button>立即登录</el-button></router-link>
         <router-link to="/register"
@@ -11,8 +11,8 @@
       </div>
     </template>
     <template v-if="isLogin">
-      <h1><router-link to="/">Let's share</router-link></h1>
-      <router-link to="create">
+      <h1><router-link to="/">金博金客</router-link></h1>
+      <router-link to="/create">
         <i class="edit el-icon-plus"></i>
       </router-link>
 
@@ -24,7 +24,7 @@
           :title="user.username"
         />
         <ul>
-          <li><router-link to="my">我的</router-link></li>
+          <li><router-link to="/my">我的</router-link></li>
           <li><a href="#" @click="onLogout">注销</a></li>
         </ul>
       </div>
@@ -53,6 +53,7 @@ export default {
     ...mapActions(["checkLogin", "logout"]),
     onLogout() {
       this.logout();
+      this.$router.push('/')
     },
   },
 };
